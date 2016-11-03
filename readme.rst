@@ -16,8 +16,10 @@ SQL
 
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
   `body` text NOT NULL,
+  `post_image` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
