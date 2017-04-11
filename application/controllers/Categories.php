@@ -18,7 +18,9 @@
 			
 			$data['title'] = 'Create Category';
 
-			$this->form_validation->set_rules('name', 'Name', 'required');
+			$this->form_validation->set_rules('name', 'Name', 'required|is_unique[categories.name]', array(
+                      'is_unique' => 'This Category already exists.'
+                         ));
 
 			if($this->form_validation->run() === FALSE){
 				$this->load->view('templates/header');
