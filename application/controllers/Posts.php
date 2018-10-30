@@ -61,7 +61,8 @@
 				$config['max_width'] = '2000';
 				$config['max_height'] = '2000';
 
-				$this->load->library('upload', $config);
+				$this->load->library('upload');
+                        	$this->upload->initialize($config);
 
 				if(!$this->upload->do_upload()){
 					$errors = array('error' => $this->upload->display_errors());
