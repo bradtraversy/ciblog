@@ -48,7 +48,8 @@
 				// Login user
 				$user_id = $this->user_model->login($username, $password);
 
-				if($user_id){
+				// id check
+				if(!($user_id === false)){
 					// Create session
 					$user_data = array(
 						'user_id' => $user_id,
