@@ -9,6 +9,10 @@
 	width:100%;
 }
 
+.post-text{
+	word-wrap: break-word;
+}
+
 .pagination-links{
 	margin:30px 0;
 }
@@ -25,8 +29,4 @@ a.pagination-link{
 	margin:5px;
 	background: #f4f4f4;
 	border: 1px #ccc solid;
-}
-
-.cat-delete{
-	display:inline;
 }

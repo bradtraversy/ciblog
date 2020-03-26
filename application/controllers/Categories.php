@@ -35,7 +35,7 @@
 		}
 
 		public function posts($id){
-			$data['title'] = $this->category_model->get_category($id)->name;
+			$data['title'] = 'Category: ' . $this->category_model->get_category($id)->name;
 
 			$data['posts'] = $this->post_model->get_posts_by_category($id);
 
