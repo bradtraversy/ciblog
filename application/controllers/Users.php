@@ -2,6 +2,10 @@
 	class Users extends CI_Controller{
 		// Register user
 		public function register(){
+			if (isset($this->session->user_id)) {
+				redirect('home');
+			}
+			
 			$data['title'] = 'Sign Up';
 
 			$this->form_validation->set_rules('name', 'Name', 'required');
@@ -29,6 +33,10 @@
 
 		// Log in user
 		public function login(){
+			if (isset($this->session->user_id)) {
+				redirect('home');
+			}
+
 			$data['title'] = 'Sign In';
 
 			$this->form_validation->set_rules('username', 'Username', 'required');
